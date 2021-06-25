@@ -4,7 +4,7 @@ helm:
   chart: rancher-demo
   repo: https://janeczku.github.io/fleet-demo-charts
   releaseName: rancher-demo
-  version: 2.5.0
+  version: 2.6.0
   values:
     app:
       title: Fleet App
