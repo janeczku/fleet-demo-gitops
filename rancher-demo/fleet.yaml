@@ -8,4 +8,16 @@ helm:
   values:
     app:
       title: Fleet App
-      cluster: global.fleet.clusterLabels.name
+      cluster: global.fleet.clusterLabels.management.cattle.io/cluster-display-name
+    ingress:
+      enabled: true
+      host: nip.io
+targetCustomizations:
+- name: pre-prod
+  helm:
+    values:
+      app:
+        pets: cowmeleons
+  clusterSelector:
+    matchLabels:
+      env: qa
